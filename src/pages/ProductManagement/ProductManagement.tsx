@@ -1,8 +1,7 @@
 import ProductTable from "./ProductTable";
+import CreateProduct from "./CreateProduct";
 
 const ProductManagement = () => {
-  
-
   return (
     <>
       <section className="mx-auto w-full max-w-7xl px-4 py-10">
@@ -15,15 +14,10 @@ const ProductManagement = () => {
             </p> */}
           </div>
           <div>
-            <button
-              type="button"
-              className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-            >
-              Create a New Product
-            </button>
+            <CreateProduct/>
           </div>
         </div>
-        <ProductTable/>
+        <ProductTable />
         <div className="flex items-center justify-center pt-6">
           <a
             href="#"

@@ -3,21 +3,40 @@ import { baseApi } from "../api/baseApi";
 
 const productApi = baseApi.injectEndpoints({
     endpoints: (builder) => ({
-        createProducts: builder.mutation({
-            query: (payload) => ({
-                url: '/products',
-                method: 'POST',
-                body: payload
-            })
-        }),
+        createProduct: builder.mutation({
+                query: (productData) => ({
+                    url: '/products',
+                    method: 'POST',
+                    body: productData,
+                })
+            }),
         getAllProducts: builder.query({
             query: () => ({
                 url: '/products',
                 method: 'GET',
             })
         }),
-        
+
     })
 })
 
-export const { useCreateProductsMutation, useGetAllProductsQuery } = productApi;
+export const { useCreateProductMutation, useGetAllProductsQuery } = productApi;
+
+// createProduct: builder.mutation({
+//     query: (data) => ({
+//         url: '/products',
+//         method: 'POST',
+//         body: data,
+//     })
+// }),
+
+// createProduct: builder.mutation({
+//     query: (data) => {
+//         console.log(data);
+//         return {
+//             url: '/products',
+//             method: 'POST',
+//             body: data,
+//         }
+//     }
+// }),

@@ -1,14 +1,11 @@
-import Footer from "@/pages/Home/Footer";
-import Navbar from "@/pages/Home/Navbar";
-import { Outlet } from "react-router";
+import Category from "@/pages/Home/Category";
+
 
 const MainLayout = () => {
   return (
-    <>
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </>
+    <div className="h-screen">
+      <Category/>
+    </div>
   );
 };
 
