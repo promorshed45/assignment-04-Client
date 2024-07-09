@@ -1,5 +1,6 @@
 import App from "@/App";
 import Product from "@/pages/Product";
+import ProductManagement from "@/pages/ProductManagement/ProductManagement";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -8,8 +9,12 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/Products",
+        path: "/products",
         element: <Product/>
+      },
+      {
+        path: "/products-management",
+        element: <ProductManagement/>
       },
     ],
   },

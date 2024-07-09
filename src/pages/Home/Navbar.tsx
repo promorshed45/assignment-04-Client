@@ -15,11 +15,11 @@ const Navbar = () => {
     },
     {
       name: "Products",
-      href: "/Products",
+      href: "/products",
     },
     {
         name: "Product Management",
-        href: "#",
+        href: "/products-management",
     },
     {
         name: "Product Details",
