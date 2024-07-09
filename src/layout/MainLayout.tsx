@@ -1,11 +1,13 @@
 import Category from "@/pages/Home/Category";
+import FeaturedProducts from "@/pages/Home/FeaturedProducts";
 
 
 const MainLayout = () => {
   return (
-    <div className="h-screen">
-      <Category/>
-    </div>
+    <>
+     <FeaturedProducts/>
+     <Category/>
+     </>
   );
 };
 
