@@ -1,9 +1,10 @@
 import App from "@/App";
 import MainLayout from "@/layout/MainLayout";
-import Product from "@/pages/Product";
 import CreateProduct from "@/pages/ProductManagement/CreateProduct";
 import ProductManagement from "@/pages/ProductManagement/ProductManagement";
+import Products from "@/pages/Home/Product/Products";
 import { createBrowserRouter } from "react-router-dom";
+import ProductDetails from "@/pages/Home/Product/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/products",
-        element: <Product/>
+        element: <Products/>
+      },
+      {
+        path: "/products/:id",
+        element: <ProductDetails/>
       },
       {
         path: "/products-management",

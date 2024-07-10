@@ -1,5 +1,5 @@
 import Category from "@/pages/Home/Category";
-import FeaturedProducts from "@/pages/Home/FeaturedProducts";
+import FeaturedProducts from "@/pages/Home/Product/FeaturedProducts";
 
 
 const MainLayout = () => {
