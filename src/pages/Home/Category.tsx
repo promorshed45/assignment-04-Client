@@ -2,8 +2,8 @@ import { Activity, Heart, Sun, Zap } from "lucide-react";
 
 const Category = () => {
     return (
-        <div className="mx-auto max-w-7xl px-2 lg:px-8 py-5 md:py-10">
-            <div className="grid grid-cols-2 md:grid-cols-4  gap-y-8 text-center sm:grid-cols-2 sm:gap-12 lg:grid-cols-4">
+        <div className="mx-auto w-full bg-gray-100  pt-5">
+            <div className="grid grid-cols-2 md:grid-cols-4 px-2 lg:px-8 py-5 md:py-16 gap-y-8 text-center sm:grid-cols-2 sm:gap-12 lg:grid-cols-4">
                 <div>
                     <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-blue-100">
                     <Activity className="h-9 w-9 text-fuchsia-700" />

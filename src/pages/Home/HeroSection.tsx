@@ -1,5 +1,5 @@
 import video from '@/assets/image/video.mp4';
-import slide1 from '@/assets/image/slider1.png';
+import slide2 from '@/assets/image/slider2.png';
 import Autoplay from "embla-carousel-autoplay"
 
 
@@ -55,7 +55,7 @@ const HeroSection = () => {
 
           <CarouselItem>
             <section className="relative flex items-center h-screen">
-              <img src={slide1} alt="Descriptive Alt Text" className="absolute inset-0 w-full h-full object-cover" />
+              <img src={slide2} alt="Descriptive Alt Text" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
               <div className="relative flex w-full h-full">
                 <div className="flex flex-col justify-center p-8 md:p-16 w-full md:w-1/2 text-white z-10">
@@ -81,10 +81,10 @@ const HeroSection = () => {
           </CarouselItem>
          
           
-          
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+          
+        <CarouselPrevious className='mx-auto ml-16 bg-rose-500 text-white border-none hover:text-rose-500'/>
+        <CarouselNext className='mx-auto mr-16 bg-rose-500 text-white border-none hover:text-rose-500' />
       </Carousel>
     </div>
   );

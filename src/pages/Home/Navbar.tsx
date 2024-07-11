@@ -31,7 +31,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="md:container py-2 relative w-full border-b border-b-gray-200">
+    <div className="md:container py-2 relative w-full border-b bg-white border-b-gray-200">
       <div className="mx-auto flex  items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <div className="flex items-center">
