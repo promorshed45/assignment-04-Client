@@ -1,5 +1,4 @@
 import { useGetSingleProductQuery } from '@/redux/features/productsApi';
-import { Star, ChevronDown } from 'lucide-react';
 import { useParams } from 'react-router-dom'; 
 
 const ProductDetails = () => {

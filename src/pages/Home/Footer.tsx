@@ -65,7 +65,7 @@ const Footer = () => {
           <div className="absolute bg-white rounded-full p-1">
           <Link to='/'><img alt="Fitness zone" className="size-10" src={logo} /></Link>
           </div>
-          <h1 className="font-bold pl-14 text-2xl"> Fitness <span className="text-red-500 font-serif"> Zone </span> </h1>
+          <h1 className="font-bold pl-14 text-2xl"> Fitness <span className="text-red-500"> Zone </span> </h1>
         </div>
         <div className="mt-4 md:mt-0">
           <p className="text-lg font-medium text-gray-500">© 2023 Fitness. All rights reserved.</p>

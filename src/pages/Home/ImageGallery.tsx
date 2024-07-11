@@ -1,25 +1,8 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 
 const ImageGallery = () => {
   const [zoomedImageIndex, setZoomedImageIndex] = useState(null);
 
-  // Dummy data of image URLs (replace with your actual image URLs)
-  const images = [
-    'https://i.ibb.co/mXwy2mK/1-12.jpg',
-    'https://i.ibb.co/5js8yPF/1-11.jpg',
-    'https://i.ibb.co/rf30m6N/1-10.jpg',
-    'https://i.ibb.co/pfx3DBn/1-8.jpg',
-    'https://i.ibb.co/9pkMmv7/1-2.jpg',
-    'https://i.ibb.co/6Pf5VD4/1-5.jpg',
-    'https://i.ibb.co/zxjfwH1/1-3.jpg',
-    'https://i.ibb.co/yd8fQjV/1-4.jpg',
-    'https://i.ibb.co/pb9gStn/1-6.jpg',
-    'https://i.ibb.co/ggK0xQt/1-9.jpg',
-    'https://i.ibb.co/4KYDT6r/1-1.jpg',
-    'https://i.ibb.co/Wk1B3sz/1.jpg',
-    'https://i.ibb.co/hXF6yKY/1-7.jpg',
-
-  ];
 
   // Function to handle click on an image to zoom in
   const handleZoomIn = (index) => {
@@ -104,3 +87,21 @@ const ImageGallery = () => {
 };
 
 export default ImageGallery;
+
+const images = [
+  'https://i.ibb.co/J2NnHdx/1-12.jpg',
+  'https://i.ibb.co/mRwNJhB/1-2.jpg',
+  'https://i.ibb.co/fDQ4B31/1-6.jpg',
+
+  'https://i.ibb.co/ZM3pz8C/1-3.jpg',
+  'https://i.ibb.co/vkg2Ck1/1-4.jpg',
+  'https://i.ibb.co/Vg4fKvV/1-5.jpg',
+
+  'https://i.ibb.co/rG3Hn3N/1-10.jpg',
+  'https://i.ibb.co/5KYJXzC/1-8.jpg',
+
+  'https://i.ibb.co/Qr3QT3z/1-11.jpg',
+  'https://i.ibb.co/jfdhmSW/1.jpg',
+  'https://i.ibb.co/P9GM0Pv/1-1.jpg',
+
+];

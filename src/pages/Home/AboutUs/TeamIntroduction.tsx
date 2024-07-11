@@ -1,56 +1,19 @@
-import React from 'react';
 
-const teamMembers = [
-  {
-    name: 'John Doe',
-    role: 'CEO & Founder',
-    bio: 'With over 20 years of experience, John leads our company with a vision for innovation and excellence.',
-    imageUrl: 'https://via.placeholder.com/150'
-  },
-  {
-    name: 'Jane Smith',
-    role: 'Chief Product Officer',
-    bio: 'Jane ensures our fitness equipment meets top quality and innovation standards.',
-    imageUrl: 'https://via.placeholder.com/150'
-  },
-  {
-    name: 'Mike Johnson',
-    role: 'Head of Sales & Marketing',
-    bio: 'Mike boosts our brand’s visibility and engagement through creative campaigns.',
-    imageUrl: 'https://via.placeholder.com/150'
-  },
-  {
-    name: 'David Brown',
-    role: 'Head of Customer Service',
-    bio: 'David ensures top-notch customer support and satisfaction.',
-    imageUrl: 'https://via.placeholder.com/150'
-  },
-  {
-    name: 'Sophia Wilson',
-    role: 'Chief Financial Officer',
-    bio: 'Sophia manages our finances for sustainable growth and profitability.',
-    imageUrl: 'https://via.placeholder.com/150'
-  },
-  {
-    name: 'Olivia Taylor',
-    role: 'Head of Research & Development',
-    bio: 'Olivia leads our R&D team to innovate and improve our fitness products.',
-    imageUrl: 'https://via.placeholder.com/150'
-  },
-];
+
+
 
 const TeamIntroduction = () => {
   return (
-    <section className="bg-gray-100 py-12">
+    <section className="bg-gray-100 py-12 pb-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-8">Meet Our Team</h2>
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {teamMembers.map((member, i) => (
-            <div key={i} className="mx-auto w-[300px] rounded-md border">
+            <div key={i} className="mx-auto bg-white w-[300px] rounded-md border">
             <img
               src={member.imageUrl}
               alt={member.name}
-              className="h-[200px] w-full rounded-t-md object-cover"
+              className="h-[350px] w-full rounded-t-md"
             />
             <div className="p-4">
               <h1 className="text-lg font-semibold"> {member.name} </h1>
@@ -124,3 +87,42 @@ const TeamIntroduction = () => {
 };
 
 export default TeamIntroduction;
+
+const teamMembers = [
+  {
+    name: 'John Doe',
+    role: 'CEO & Founder',
+    bio: 'With over 20 years of experience, John leads our company with a vision for innovation and excellence.',
+    imageUrl: 'https://i.ibb.co/WGTDdGD/albert-dera-ILip77-Sbm-OE-unsplash.jpg'
+  },
+  {
+    name: 'Jane Smith',
+    role: 'Chief Product Officer',
+    bio: 'Jane ensures our fitness equipment meets top quality and innovation standards.',
+    imageUrl: 'https://i.ibb.co/XY91B87/joseph-gonzalez-i-Fg-Rcq-Hznqg-unsplash.jpg'
+  },
+  {
+    name: 'Mike Johnson',
+    role: 'Head of Sales & Marketing',
+    bio: 'Mike boosts our brand’s visibility and engagement through creative campaigns.',
+    imageUrl: 'https://i.ibb.co/Dz65xJj/jurica-koletic-7-YVZYZe-ITc8-unsplash.jpg'
+  },
+  {
+    name: 'David Brown',
+    role: 'Head of Customer Service',
+    bio: 'David ensures top-notch customer support and satisfaction.',
+    imageUrl: 'https://i.ibb.co/7N3gWJ8/stefan-stefancik-QXev-Dflbl8-A-unsplash-1.jpg'
+  },
+  // {
+  //   name: 'Sophia Wilson',
+  //   role: 'Chief Financial Officer',
+  //   bio: 'Sophia manages our finances for sustainable growth and profitability.',
+  //   imageUrl: 'https://i.ibb.co/fpgdyhD/erik-lucatero-d2-MSDuj-Jl2g-unsplash.jpg'
+  // },
+  // {
+  //   name: 'Olivia Taylor',
+  //   role: 'Head of Research & Development',
+  //   bio: 'Olivia leads our R&D team to innovate and improve our fitness products.',
+  //   imageUrl: 'https://i.ibb.co/Nt9kBXp/jake-nackos-IF9-TK5-Uy-KI-unsplash.jpg'
+  // },
+];

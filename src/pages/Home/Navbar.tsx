@@ -38,7 +38,7 @@ const Navbar = () => {
           <div className="absolute">
             <Link to='/'><img alt="Fitness zone" className="size-8 md:size-12" src={logo} /></Link>
           </div>
-          <h1 className="font-bold pl-8 md:pl-16 text-2xl"> Fitness <span className="text-red-500 font-serif"> Zone </span> </h1>
+          <h1 className="font-bold pl-8 md:pl-16 text-2xl"> Fitness <span className="text-red-500"> Zone </span> </h1>
           </div>
           <div className="hidden lg:block md:pl-16">
             <ul className="inline-flex space-x-8">
