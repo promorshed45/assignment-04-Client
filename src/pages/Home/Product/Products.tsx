@@ -27,9 +27,9 @@ const Products = () => {
                         {item.description}
                     </p>
                     <Link to={`/products/${item._id}`}>
-                    <button className="my-2 inline-flex cursor-pointer items-center text-sm font-semibold white bg-gray-300 px-4 py-2 rounded-md">
-                    explore more &rarr;
-                    </button>
+                        <button className="my-2 inline-flex text-rose-500 cursor-pointer items-center text-sm font-semibold white bg-gray-200 px-4 py-2 rounded-md">
+                            Explore More &rarr;
+                        </button>
                     </Link>
                 </div>
             </div>

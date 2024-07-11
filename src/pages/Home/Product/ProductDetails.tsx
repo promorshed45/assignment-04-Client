@@ -34,7 +34,7 @@ const ProductDetails = () => {
                                 <h1 className="mr-3 text-md font-semibold"> Category: <span className='pl-2 text-xl'>{category}</span> </h1>
                             </div>
                             <div className="ml-auto flex items-center">
-                                <h1 className="mr-3 text-md font-semibold">Stock: <span className='pl-2 text-xl'> {stock} {data?.data?.stock.length < 0 ? 'In Stock' : 'Out of Stock'} </span> </h1>
+                                <h1 className="mr-3 text-md font-semibold">Stock: <span className='pl-2 text-xl'> {stock} </span> </h1>
                             </div>
                         </div>
                         <div className="flex items-center justify-between">

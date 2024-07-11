@@ -1,35 +1,33 @@
 import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import logo from "../../../src/assets/logo.svg";
+
 
 const Footer = () => {
   return (
-    <footer className="w-full">
-      <hr className="my-8" />
+    <footer className="w-full bg-slate-950 py-10 text-white">
       <div className="mx-auto flex max-w-6xl flex-col items-start space-x-8 md:flex-row">
         <div className="w-full px-4 md:w-1/2 lg:px-0">
-          <h1 className="max-w-sm text-3xl font-bold">
-            Subscribe to <br /> our Newsletter
-          </h1>
-          <form
-            action=""
-            className="mt-4 inline-flex w-full items-center md:w-3/4"
-          >
+          <h1 className="max-w-sm text-3xl font-bold">Subscribe to our Newsletter</h1>
+          <form action="" className="mt-4 inline-flex w-full items-center md:w-3/4">
             <input
-              className="flex h-10 w-full rounded-md border border-black/20 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+              className="flex h-10 w-full rounded-md border  border-gray-400 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
               type="email"
               placeholder="Email"
             ></input>
             <button
               type="button"
-              className="ml-4 rounded-full bg-black px-3 py-3 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              className="ml-4 rounded-full bg-white px-2.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
-              <ChevronRight className="h-4 w-4" />
+              <ChevronRight className="size-6 text-rose-500" />
             </button>
           </form>
-          
         </div>
+
+
         <div className="mt-8 grid grid-cols-2 gap-6 md:mt-0 lg:w-3/4 lg:grid-cols-3">
           <div className="mb-8 lg:mb-0">
-            <p className="mb-6 text-lg font-semibold text-gray-700 text-left">Contact</p>
+            <p className="mb-6 text-lg font-semibold text-white text-left">Contact</p>
             <ul className="flex flex-col space-y-3 text-[14px]  text-left font-medium text-gray-500">
               <li> Ayshal Ali Mansion </li>
               <li> Pahartali, Raozan </li>
@@ -40,17 +38,17 @@ const Footer = () => {
           </div>
 
           <div className="mb-8 lg:mb-0">
-            <p className="mb-6 text-lg font-semibold text-gray-700 text-left">Company</p>
+            <p className="mb-6 text-lg font-semibold text-white text-left">Company</p>
             <ul className="flex flex-col space-y-3 text-[14px] text-left font-medium text-gray-500">
               <li>About us</li>
               <li>Company History</li>
               <li>Our Team</li>
-              <li>Our Vision</li> 
+              <li>Our Vision</li>
               <li>Gift Cards</li>
             </ul>
           </div>
           <div className="mb-8 lg:mb-0">
-            <p className="mb-6 text-lg font-semibold text-gray-700 text-left">Terms & Conditions</p>
+            <p className="mb-6 text-lg font-semibold text-white text-left">Terms & Conditions</p>
             <ul className="flex flex-col space-y-4 text-[14px] text-left font-medium text-gray-500">
               <li>About us</li>
               <li>Privacy Policy</li>
@@ -60,7 +58,18 @@ const Footer = () => {
           </div>
         </div>
 
-        
+      </div>
+      <hr className="my-4" />
+      <div className="mx-auto max-w-6xl items-center justify-between px-4 md:flex lg:px-0">
+      <div className="inline-flex items-center space-x-2">
+          <div className="absolute bg-white rounded-full p-1">
+          <Link to='/'><img alt="Fitness zone" className="size-10" src={logo} /></Link>
+          </div>
+          <h1 className="font-bold pl-14 text-2xl"> Fitness <span className="text-red-500 font-serif"> Zone </span> </h1>
+        </div>
+        <div className="mt-4 md:mt-0">
+          <p className="text-lg font-medium text-gray-500">© 2023 Fitness. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );
