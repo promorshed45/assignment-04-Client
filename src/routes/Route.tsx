@@ -6,6 +6,7 @@ import Products from "@/pages/Home/Product/Products";
 import { createBrowserRouter } from "react-router-dom";
 import ProductDetails from "@/pages/Home/Product/ProductDetails";
 import ViewCart from "@/pages/Order/ViewCart";
+import AboutUs from "@/pages/Home/AboutUs/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <MainLayout />,
+        element: <MainLayout />
       },
       {
         path: "/products",
@@ -29,13 +30,18 @@ const router = createBrowserRouter([
         element: <ProductDetails/>
       },
       {
-        path: '/view-cart',
-        element: <ViewCart/>
-      },
-      {
         path: "/products-management",
         element: <ProductManagement/>
       },
+      {
+        path: '/about-us',
+        element: <AboutUs/>
+      },
+      {
+        path: '/view-cart',
+        element: <ViewCart/>
+      },
+      
       {
         path: "/create-product",
         element: <CreateProduct/>

@@ -13,13 +13,13 @@ const Products = () => {
 
             <div className=" grid  max-w-7xl items-center  md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
 
-                {data?.data.slice(0, 4).map((item: TProduct) => (
+                {data?.data.map((item: TProduct) => (
                     <div
                         key={item._id}
                         className="relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[400px]"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1588099768531-a72d4a198538?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NnwxMTM4MTU1NXx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+                            src={item.images}
                             alt="AirMax Pro"
                             className="z-0 h-full w-full rounded-md object-cover"
                         />
@@ -28,7 +28,7 @@ const Products = () => {
                             <h1 className="text-lg font-semibold text-white"> {item.name} </h1>
                             <p className="mt-2 text-sm text-gray-300">{item.description}</p>
                             <Link to={`/products/${item._id}`}>
-                                <button className="my-2 inline-flex text-rose-500 cursor-pointer items-center text-sm font-semibold white bg-gray-300 px-4 py-2 rounded-md">
+                                <button className="my-2 inline-flex cursor-pointer items-center text-sm font-semibold white bg-gray-300 px-4 py-2 rounded-md">
                                     Explore More &rarr;
                                 </button>
                             </Link>

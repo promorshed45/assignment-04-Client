@@ -26,12 +26,12 @@ const Navbar = () => {
     },
     {
       name: "About Us",
-      href: "#",
+      href: "/about-us",
     },
   ];
 
   return (
-    <div className="md:container py-2 relative w-full border-b bg-white border-b-gray-200">
+    <div className="md:container py-2 sticky w-full h-20 z-20 top-0 start-0 border-b bg-white border-b-gray-200">
       <div className="mx-auto flex  items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <div className="flex items-center">
