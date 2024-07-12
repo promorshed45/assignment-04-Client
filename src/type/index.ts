@@ -3,7 +3,12 @@ export type TProduct= {
     name: string,
     price: number,
     description: string,
-    images: string,
+    image: string,
     category: string,
     stock: number,
 } 
+
+export type TFilterInitialState = {
+    searchTerm: string | null,
+    
+}

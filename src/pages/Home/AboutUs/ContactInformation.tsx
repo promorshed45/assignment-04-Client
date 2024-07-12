@@ -9,13 +9,13 @@ const ContactInformation = () => {
         <div className="flex flex-col md:flex-row justify-around items-start">
           <div className="md:w-1/3 mb-8 md:mb-0">
             <h3 className="text-2xl font-semibold text-gray-700 mb-4">Our Address</h3>
-            <p className="text-gray-600">123 Fitness Street</p>
-            <p className="text-gray-600">Fit City, FC 12345</p>
-            <p className="text-gray-600">Country</p>
+            <p className="text-gray-600"> Aysha Ali Mansion  </p>
+            <p className="text-gray-600">  Pahartali, Raozan </p>
+            <p className="text-gray-600"> Chattagram, Banglaesh </p>
           </div>
           <div className="md:w-1/3 mb-8 md:mb-0">
             <h3 className="text-2xl font-semibold text-gray-700 mb-4">Contact Information</h3>
-            <p className="text-gray-600">Phone: (123) 456-7890</p>
+            <p className="text-gray-600">Mobile: 01851363745</p>
             <p className="text-gray-600">Email: info@fitnesszone.com</p>
           </div>
           <div className="md:w-1/3">

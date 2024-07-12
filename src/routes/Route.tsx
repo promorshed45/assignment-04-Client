@@ -7,11 +7,13 @@ import { createBrowserRouter } from "react-router-dom";
 import ProductDetails from "@/pages/Home/Product/ProductDetails";
 import ViewCart from "@/pages/Order/ViewCart";
 import AboutUs from "@/pages/Home/AboutUs/AboutUs";
+import PageNotFound from "@/pages/PageNotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <PageNotFound/>,
     children: [
       {
         path: "/",

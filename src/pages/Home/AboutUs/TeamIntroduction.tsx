@@ -4,12 +4,12 @@
 
 const TeamIntroduction = () => {
   return (
-    <section className="bg-gray-100 py-12 pb-16">
+    <section className="bg-gray-100 py-12 pb-16 px-5 md:px-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-8">Meet Our Team</h2>
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {teamMembers.map((member, i) => (
-            <div key={i} className="mx-auto bg-white w-[300px] rounded-md border">
+            <div key={i} className="mx-auto bg-white rounded-md border">
             <img
               src={member.imageUrl}
               alt={member.name}

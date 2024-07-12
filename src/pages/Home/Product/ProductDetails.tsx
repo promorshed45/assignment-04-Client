@@ -1,4 +1,4 @@
-import { useGetSingleProductQuery } from '@/redux/features/productsApi';
+import { useGetSingleProductQuery } from '@/redux/features/products/productsApi';
 import { useParams } from 'react-router-dom'; 
 
 const ProductDetails = () => {
@@ -11,7 +11,7 @@ const ProductDetails = () => {
         );
     }
 
-    const { name, description, price, category, stock } = data.data;
+    const { name, description, price, category, stock, image } = data.data;
 
     console.log(data.data);
     return (
@@ -21,7 +21,7 @@ const ProductDetails = () => {
                     <img
                         alt="Nike Air Max 21A"
                         className="h-64 w-full rounded object-cover lg:h-96 lg:w-1/2"
-                        src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c2hvZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+                        src={image}
                     />
                     <div className="mt-6 w-full lg:mt-0 lg:w-1/2 lg:pl-10 text-left">
                         <h1 className="my-4 text-3xl font-semibold text-black">{name}</h1>

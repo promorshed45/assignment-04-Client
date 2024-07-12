@@ -1,25 +1,34 @@
-import { useGetAllProductsQuery } from "@/redux/features/productsApi";
-import { TProduct } from "@/type/product.type";
+import { useGetAllProductsQuery } from "@/redux/features/products/productsApi";
+import { TProduct } from "@/type";
 import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar";
+import { useAppDispatch, useAppSelector } from "@/redux/hook";
+import { RootState } from "@/redux/store";
 
 const Products = () => {
-    const { data, isLoading } = useGetAllProductsQuery({});
+    const dispatch = useAppDispatch();
+
+  const { searchTerm  } = useAppSelector((state: RootState) => state.filters);
+
+    const { data, isLoading } = useGetAllProductsQuery({searchTerm});
 
     if (!isLoading) {
         <div className="w-10 h-10 animate-[spin_1s_linear_infinite] rounded-full border-double border-4 border-r-0 border-l-0 border-b-sky-400 border-t-sky-700"></div>;
     }
     return (
-        <div className="container mx-auto  px-4 py-5 md:py-20 sm:px-6">
+        <div className="container mx-auto  px-4 py-5 md:py-20 sm:px-6"> 
+            <SearchBar/>
 
+            
             <div className=" grid  max-w-7xl items-center  md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
 
-                {data?.data.map((item: TProduct) => (
+                {data?.data?.map((item: TProduct) => (
                     <div
                         key={item._id}
                         className="relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[400px]"
                     >
                         <img
-                            src={item.images}
+                            src={item.image}
                             alt="AirMax Pro"
                             className="z-0 h-full w-full rounded-md object-cover"
                         />

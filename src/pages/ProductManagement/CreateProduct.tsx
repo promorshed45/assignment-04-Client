@@ -2,19 +2,19 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useCreateProductMutation } from "@/redux/features/productsApi";
-import { FieldValues, useForm } from "react-hook-form";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useCreateProductMutation } from "@/redux/features/products/productsApi";
+import { Controller, FieldValues, useForm } from "react-hook-form";
 import { toast } from "sonner";
 
 const CreateProduct = () => {
-  const { register, handleSubmit } = useForm();
+  const { control, register, handleSubmit } = useForm();
   const [createProduct]=  useCreateProductMutation();
 
   
@@ -26,6 +26,7 @@ const CreateProduct = () => {
         price: data.price,
         description: data.description,
         image: data.image,
+        category: data.category,
         stock: data.stock,
     }
     console.log(data);
@@ -69,10 +70,7 @@ const CreateProduct = () => {
                 Description
               </Label>
               <Input
-              type="text"
-                id="description"
-                {...register("description")}
-                className="col-span-3"
+                type="text" id="description" {...register("description")} className="col-span-3"
               />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -81,17 +79,30 @@ const CreateProduct = () => {
               </Label>
               <Input type="text" id="image" {...register("image")} className="col-span-3" />
             </div>
-            <div className="grid grid-cols-4 items-center gap-4">
+            <div className="grid grid-cols-4 items-center gap-4 w-full">
               <Label htmlFor="category" className="text-right">
                 Category
               </Label>
-              <Input
-              type="text"
-                id="category"
-                {...register("category")}
-                className="col-span-3"
+              <Controller
+                name="category"
+                control={control}
+                defaultValue=""
+                render={({ field }) => (
+                  <Select onValueChange={field.onChange} value={field.value} >
+                    <SelectTrigger className="col-span-3">
+                      <SelectValue placeholder="Select a category" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="functional-training">Functional Training</SelectItem>
+                      <SelectItem value="outdoor-fitness">Outdoor Fitness</SelectItem>
+                      <SelectItem value="hiit-equipment">HIIT Equipment</SelectItem>
+                      <SelectItem value="mind-body-wellness">Mind-Body Wellness</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
               />
             </div>
+            
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="stock" className="text-right">
                 Stock

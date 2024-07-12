@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { useGetAllProductsQuery } from "@/redux/features/productsApi";
-import { TProduct } from "@/type/product.type";
+import { useGetAllProductsQuery } from "@/redux/features/products/productsApi";
+import { TProduct } from "@/type";
 import { Link } from "react-router-dom";
 
 const FeaturedProducts = () => {
@@ -24,7 +24,7 @@ const FeaturedProducts = () => {
             className="relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[400px]"
           >
             <img
-              src={item.images}
+              src={item.image}
               alt="AirMax Pro"
               className="z-0 h-full w-full rounded-md object-cover"
             />

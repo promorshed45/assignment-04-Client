@@ -1,5 +1,5 @@
-import { useGetAllProductsQuery } from "@/redux/features/productsApi";
-import { TProduct } from "@/type/product.type";
+import { useGetAllProductsQuery } from "@/redux/features/products/productsApi";
+import { TProduct } from "@/type";
 import { Pencil, Trash2 } from "lucide-react";
 
 const ProductTable = () => {
