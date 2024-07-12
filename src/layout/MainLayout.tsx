@@ -1,5 +1,5 @@
 import Benefit from "@/pages/Home/Benefit";
-import Category from "@/pages/Home/Category";
+import Category from "@/pages/Home/CategorySection";
 import Gallery from "@/pages/Home/Gallery";
 import HeroSection from "@/pages/Home/HeroSection";
 import ImageGallery from "@/pages/Home/ImageGallery";

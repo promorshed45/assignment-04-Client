@@ -1,6 +1,6 @@
 import { Activity, Heart, Sun, Zap } from "lucide-react";
 
-const Category = () => {
+const CategorySection = () => {
     return (
         <div className="mx-auto w-full bg-gray-100  pt-5">
             <div className="grid grid-cols-2 md:grid-cols-4 px-2 lg:px-8 py-5 md:py-16 gap-y-8 text-center sm:grid-cols-2 sm:gap-12 lg:grid-cols-4">
@@ -33,4 +33,4 @@ const Category = () => {
     );
 };
 
-export default Category;
+export default CategorySection;

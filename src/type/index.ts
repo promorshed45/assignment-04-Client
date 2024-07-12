@@ -8,7 +8,21 @@ export type TProduct= {
     stock: number,
 } 
 
-export type TFilterInitialState = {
-    searchTerm: string | null,
-    
-}
+export type TFiltersInitialState = {
+    searchTerm: string | null;
+    categories: string[];
+    sort: string | null;
+  };
+  
+
+export type TCategoryInitialState = {
+    category: string | null;
+  };
+  
+  interface ICartItem extends TProduct {
+    quantity: number;
+  }
+  
+  export type TCartInitialState = {
+    items: ICartItem[];
+  };

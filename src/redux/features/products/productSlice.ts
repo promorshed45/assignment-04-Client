@@ -1,24 +1,31 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { TProduct } from "@/type";
+import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-    products: [],
-    status: 'idle',
-    error: null,
+type TProductInitialState = {
+  product: TProduct;
 };
 
-const productSlice = createSlice({
-    name: 'products',
-    initialState,
-    reducers: {
-        // Add reducers as needed for local state management
+const initialState: TProductInitialState = {
+  product: {
+    name: "",
+    price: 0,
+    category: "",
+    description: "",
+    stock: 0,
+    image: "",
+  },
+};
+
+export const productSlice = createSlice({
+  name: "product",
+  initialState,
+  reducers: {
+    setProduct: (state, action) => {
+      state.product = action.payload;
     },
-    // extraReducers: (builder) => {
-    //     // Add extra reducers here if needed
-    // },
+  },
 });
 
-export const { } = productSlice.actions;
-
-// export const selectProducts = (state) => state.products.products;
+export const { setProduct } = productSlice.actions;
 
 export default productSlice.reducer;
