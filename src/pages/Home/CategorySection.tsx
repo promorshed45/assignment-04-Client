@@ -1,4 +1,4 @@
-import { Activity, Heart, Sun, Zap } from "lucide-react";
+import { Activity, Dumbbell, Heart, Sun, Zap } from "lucide-react";
 
 const CategorySection = () => {
     return (
@@ -24,9 +24,9 @@ const CategorySection = () => {
                 </div>
                 <div>
                     <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-red-100">
-                        <Heart className="h-9 w-9 text-red-600"/>
+                        <Dumbbell className="h-9 w-9 text-red-600"/>
                     </div>
-                    <h3 className="mt-8 text-lg font-semibold text-black"> Mind-Body Wellness </h3>
+                    <h3 className="mt-8 text-lg font-semibold text-black"> Accessories </h3>
                 </div>
             </div>
         </div>

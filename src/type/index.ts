@@ -8,6 +8,10 @@ export type TProduct= {
     stock: number,
 } 
 
+export type TProductInitialState = {
+  product: TProduct;
+};
+
 export type TFiltersInitialState = {
     searchTerm: string | null;
     categories: string[];
@@ -25,4 +29,11 @@ export type TCategoryInitialState = {
   
   export type TCartInitialState = {
     items: ICartItem[];
+  };
+
+  export type TCartCardProps = {
+    cart: TCartInitialState;
+    handleUpdateQuantity: (id: string, quantity: number) => void;
+    handleRemoveFromCart: (id: string) => void;
+    totalPrice: () => number;
   };

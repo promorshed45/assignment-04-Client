@@ -1,9 +1,7 @@
-import { TProduct } from "@/type";
+import { TProductInitialState } from "@/type";
 import { createSlice } from "@reduxjs/toolkit";
 
-type TProductInitialState = {
-  product: TProduct;
-};
+
 
 const initialState: TProductInitialState = {
   product: {

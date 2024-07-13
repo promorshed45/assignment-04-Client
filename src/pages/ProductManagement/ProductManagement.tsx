@@ -14,7 +14,7 @@ const ProductManagement = () => {
             </p> */}
           </div>
           <div>
-            <CreateProduct/>
+            <CreateProduct />
           </div>
         </div>
         <ProductTable />

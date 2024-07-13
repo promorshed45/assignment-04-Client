@@ -63,7 +63,7 @@ const Cart = () => {
                                 variant={"ghost"}
                                 className="inline-block text-sm text-gray-600 transition hover:underline hover:underline-offset-4"
                             >
-                                <Link to='/'>
+                                <Link to='/cart-page'>
                                 Continue shopping &rarr;
                                 </Link>
                             </Button>

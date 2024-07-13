@@ -3,13 +3,6 @@ import { baseApi } from "../../api/baseApi";
 
 const productApi = baseApi.injectEndpoints({
     endpoints: (builder) => ({
-        createProduct: builder.mutation({
-            query: (productData) => ({
-                    method: 'POST',
-                    url: '/products',
-                    body: productData,
-                })     
-        }),
         getAllProducts: builder.query({
             query: ({ category, searchTerm, sort, categories }) => {
 
@@ -26,13 +19,22 @@ const productApi = baseApi.injectEndpoints({
                 if (categories && categories.length > 0) {
                     params.append("category", categories);
                 }
-                
+
                 return {
                     url: '/products',
                     method: 'GET',
                     params: params,
                 }
-            }
+            },
+            providesTags: ["product"],
+        }),
+        createProduct: builder.mutation({
+            query: (product) => ({
+                method: 'POST',
+                url: '/products',
+                body: product,
+            }),
+            invalidatesTags: ["product"],
         }),
         getSingleProduct: builder.query({
             query: (id: string) => ({
@@ -40,11 +42,25 @@ const productApi = baseApi.injectEndpoints({
                 url: `/products/${id}`,
             })
         }),
-
+        deleteProduct: builder.mutation({
+            query: (id) => ({
+                url: `/products/${id}`,
+                method: "DELETE",
+            }),
+            invalidatesTags: ["product"],
+        }),
+        updateProduct: builder.mutation({
+            query: ({ id, product }) => ({
+                url: `/products/update/${id}`,
+                method: "PUT",
+                body: product,
+            }),
+            invalidatesTags: ["product"],
+        })
     })
 })
 
-export const { useCreateProductMutation, useGetAllProductsQuery, useGetSingleProductQuery } = productApi;
+export const { useCreateProductMutation, useGetAllProductsQuery, useGetSingleProductQuery, useDeleteProductMutation, useUpdateProductMutation } = productApi;
 
 // createProduct: builder.mutation({
 //     query: (data) => ({

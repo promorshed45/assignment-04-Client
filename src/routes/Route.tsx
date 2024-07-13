@@ -5,9 +5,11 @@ import ProductManagement from "@/pages/ProductManagement/ProductManagement";
 import Products from "@/pages/Home/Product/Products";
 import { createBrowserRouter } from "react-router-dom";
 import ProductDetails from "@/pages/Home/Product/ProductDetails";
-import ViewCart from "@/pages/Order/ViewCart";
+import ViewCart from "@/pages/Cart/ViewCart";
 import AboutUs from "@/pages/Home/AboutUs/AboutUs";
 import PageNotFound from "@/pages/PageNotFound";
+import UpdateProduct from "@/pages/ProductManagement/UpdateProduct";
+import CartPage from "@/pages/Cart/CartPage";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,10 @@ const router = createBrowserRouter([
         element: <ProductDetails/>
       },
       {
+        path: "/products/update/:id",
+        element: <UpdateProduct/>
+      },
+      {
         path: "/products/:id",
         element: <ProductDetails/>
       },
@@ -42,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: '/view-cart',
         element: <ViewCart/>
+      },
+      {
+        path: '/cart-page',
+        element: <CartPage/>
       },
       
       {
