@@ -1,15 +1,14 @@
-import { Button } from "@/components/ui/button";
 import { Minus, Plus, X } from "lucide-react";
 import EmptyCard from "./EmtyCard";
 import UserContactInfo from "./UserContactInfo";
-import { TCartCardProps } from "@/type";
+
 
 const ViewCart = ({
   cart,
   handleUpdateQuantity,
   handleRemoveFromCart,
   totalPrice,
-}: TCartCardProps) => {
+}: any) => {
   return (
     <div className="mx-auto py-5 md:py-10 max-w-4xl md:my-6">
       <div className="overflow-hidden  rounded-xl">
@@ -17,11 +16,10 @@ const ViewCart = ({
           <EmptyCard />
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2">
-            {/* Product List */}
             <div className="bg-gray-100 px-5 py-6 md:px-8">
               <div className="flow-root text-left">
                 <ul className="-my-7 divide-y divide-gray-200">
-                  {cart.items.map((item) => (
+                  {cart?.items.map((item: any) => (
                     <li
                       key={item._id}
                       className="flex items-stretch justify-between space-x-5 py-7"
@@ -91,7 +89,7 @@ const ViewCart = ({
             </div>
 
             {/* Contact Info */}
-            <UserContactInfo totalPrice={totalPrice} />
+            <UserContactInfo  totalPrice={totalPrice} />
           </div>
         )}
       </div>

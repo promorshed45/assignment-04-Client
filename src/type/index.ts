@@ -1,4 +1,4 @@
-export type TProduct= {
+export interface  TProduct {
     _id?: string,
     name: string,
     price: number,
@@ -31,9 +31,11 @@ export type TCategoryInitialState = {
     items: ICartItem[];
   };
 
-  export type TCartCardProps = {
-    cart: TCartInitialState;
-    handleUpdateQuantity: (id: string, quantity: number) => void;
-    handleRemoveFromCart: (id: string) => void;
-    totalPrice: () => number;
-  };
+
+
+  export type TCartItem = {
+    id: string;
+    name: string;
+    price: number;
+    quantity: number;
+  }

@@ -10,7 +10,7 @@ import {
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button"
-import { AlertCircle, AlertCircleIcon, CircleAlert } from "lucide-react";
+import { CircleAlert } from "lucide-react";
 import { ReactNode } from "react";
 
 type TAlertMessageProps = {

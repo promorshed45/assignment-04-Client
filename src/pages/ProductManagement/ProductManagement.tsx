@@ -8,16 +8,12 @@ const ProductManagement = () => {
         <div className="flex flex-col space-y-4  md:flex-row md:items-center md:justify-between md:space-y-0">
           <div>
             <h2 className="text-2xl font-semibold">Product List </h2>
-            {/* <p className="mt-1 text-sm text-gray-700">
-              This is a list of all employees. You can add new employees, edit
-              or delete existing ones.
-            </p> */}
           </div>
           <div>
             <CreateProduct />
           </div>
         </div>
-        <ProductTable />
+        <ProductTable/>
         <div className="flex items-center justify-center pt-6">
           <a
             href="#"

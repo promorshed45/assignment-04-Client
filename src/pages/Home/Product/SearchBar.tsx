@@ -2,16 +2,11 @@ import { Button } from "@/components/ui/button";
 import { setSearchTerm } from "@/redux/features/filter/filterSlice";
 import { useAppDispatch } from "@/redux/hook";
 import { SearchIcon } from "lucide-react";
-import { FieldValues, useForm } from "react-hook-form";
+// import { FieldValues, useForm } from "react-hook-form";
 
 const SearchBar = () => {
     const dispatch = useAppDispatch();
-//   const { register, handleSubmit } = useForm();
 
-//   const onSubmit = (data: FieldValues) => {
-//     dispatch(setSearchTerm(data));
-//     console.log(data);
-//   };
 
   return (
     <div className="py-5 md:pb-10">

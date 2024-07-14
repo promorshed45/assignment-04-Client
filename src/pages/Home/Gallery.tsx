@@ -1,12 +1,15 @@
-import { ChevronLeft, ChevronRight, LucideFastForward, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useState } from "react";
 
+type TImageIndex = number | null;
+
+
 const ImageGallery = () => {
-    const [zoomedImageIndex, setZoomedImageIndex] = useState(null);
+  const [zoomedImageIndex, setZoomedImageIndex] = useState<TImageIndex>(null);
 
 
   // Function to handle click on an image to zoom in
-  const handleZoomIn = (index) => {
+  const handleZoomIn = (index: number) => {
     setZoomedImageIndex(index);
   };
 
@@ -17,14 +20,14 @@ const ImageGallery = () => {
 
   // Function to handle previous image navigation
   const handlePrevImage = () => {
-    if (zoomedImageIndex > 0) {
-      setZoomedImageIndex(zoomedImageIndex - 1);
+    if ((zoomedImageIndex ?? 0) > 0) {
+      setZoomedImageIndex((zoomedImageIndex ?? 0) - 1);
     }
   };
 
   // Function to handle next image navigation
   const handleNextImage = () => {
-    if (zoomedImageIndex < images.length - 1) {
+    if (zoomedImageIndex !== null && zoomedImageIndex < images.length - 1) {
       setZoomedImageIndex(zoomedImageIndex + 1);
     }
   };

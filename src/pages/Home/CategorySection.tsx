@@ -1,4 +1,4 @@
-import { Activity, Dumbbell, Heart, Sun, Zap } from "lucide-react";
+import { Activity, Dumbbell, Sun, Zap } from "lucide-react";
 
 const CategorySection = () => {
     return (

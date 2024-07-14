@@ -8,19 +8,12 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { useCreateProductMutation } from "@/redux/features/products/productsApi";
-import { Controller, FieldValues, useForm } from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import { toast } from "sonner";
 
 const CreateProduct = () => {
-  const { control, register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm();
   const [createProduct] = useCreateProductMutation();
 
   const onSubmit = async (data: FieldValues) => {
